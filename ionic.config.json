@@ -1,5 +1,7 @@
 {
   "name": "e-observateur",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

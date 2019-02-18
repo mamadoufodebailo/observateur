@@ -3,6 +3,7 @@
     "node_modules/codelyzer"
   ],
   "rules": {
+    /*
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
@@ -134,5 +135,6 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "directive-class-suffix": true
+    */
   }
 }

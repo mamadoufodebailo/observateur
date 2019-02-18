@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title text-capitalize="">Connectez-vous</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item text-center="">
+    <ion-title color="success">{{lien.libelle}}</ion-title>
+  </ion-item>
+
+  <ion-img [src]="lien.logo"></ion-img>
+
+  <form [formGroup]="fgroup" (ngSubmit)="seConnecter(fgroup.value)">
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item class="erreur" *ngIf="!fgroup.controls['email'].valid && fgroup.controls['email'].touched">
+      L'email est obligatoire ou incorrect !
+    </ion-item>
+    <ion-item>
+      <ion-label>Mot de passe</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item class="erreur" *ngIf="!fgroup.controls['password'].valid && fgroup.controls['password'].touched">
+      Le mot de passe est obligatoire !
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!fgroup.valid" expand="block">Se connecter</ion-button>
+  </form>
+
+  <ion-item text-center="">
+    <ion-title style="color:red">{{message}}</ion-title>
+  </ion-item>
+
+</ion-content>
